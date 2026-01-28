@@ -3,7 +3,7 @@ export default function decorate(block) {
   // Load widget bundle once
   if (!window.__signupWidgetLoaded) {
     const script = document.createElement('script');
-    script.src = "https://cdn.jsdelivr.net/gh/vengadesh66/preactwidgets/signup/app.js";
+    script.src = "https://cdn.jsdelivr.net/gh/vengadesh66/preactwidgets/signup/app1.js";
     script.async = true;
     document.head.appendChild(script);
     window.__signupWidgetLoaded = true;
