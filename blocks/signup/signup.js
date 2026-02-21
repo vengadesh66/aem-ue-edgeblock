@@ -22,6 +22,9 @@ export default function decorate(block) {
     contentPath = block.textContent.trim();
   }
 
+  // Strip .html extension if present (UE sometimes adds it)
+  contentPath = contentPath.replace(/\.html$/, '');
+
   // Clean block
   block.innerHTML = '';
 
