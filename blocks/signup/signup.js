@@ -25,13 +25,25 @@ export default function decorate(block) {
   // Clean block
   block.innerHTML = '';
 
-  // Inject widget
+  // Build UE resource URN for Content Fragment authoring
+  const cfResourcePath = contentPath.startsWith('/content/dam')
+    ? contentPath
+    : `/content/dam${contentPath.startsWith('/') ? '' : '/'}${contentPath}`;
+  const aueResource = `urn:aemconnection:${cfResourcePath}/jcr:content/data/master`;
+
+  // Inject widget with UE instrumentation on the outer element
   const widget = document.createElement('signup-widget');
   widget.setAttribute('content-path', contentPath);
   widget.setAttribute(
     'aem-author',
     'https://author-p120465-e1171116.adobeaemcloud.com'
   );
+
+  // UE instrumentation - allows editing CF via properties panel
+  widget.setAttribute('data-aue-resource', aueResource);
+  widget.setAttribute('data-aue-type', 'reference');
+  widget.setAttribute('data-aue-filter', 'cf');
+  widget.setAttribute('data-aue-label', 'Signup Widget');
 
   block.appendChild(widget);
 }
