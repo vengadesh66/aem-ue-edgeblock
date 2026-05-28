@@ -1,0 +1,10 @@
+
+/* Countdown Timer Block Styles */
+
+/* Widget styles are handled by the web component's Shadow DOM */
+
+.countdown-timer {
+  padding: var(--spacing-l, 2rem) 0;
+  max-width: var(--content-max-width, 1200px);
+  margin: 0 auto;
+}

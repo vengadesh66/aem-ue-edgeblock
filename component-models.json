@@ -180,6 +180,55 @@
     ]
   },
   {
+    "id": "contact-form",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "label": "Form Title",
+        "value": "Contact Us"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "submitEndpoint",
+        "label": "Submit Endpoint URL",
+        "value": "/api/contact",
+        "description": "API endpoint for form submission"
+      }
+    ]
+  },
+  {
+    "id": "countdown-timer",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "targetDate",
+        "label": "Target Date",
+        "required": true,
+        "description": "ISO date string (e.g., 2027-01-01T00:00:00)",
+        "placeholder": "2027-01-01T00:00:00"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "label": "Countdown Title",
+        "value": "Countdown"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "expiredMessage",
+        "label": "Expired Message",
+        "value": "Event has started!",
+        "description": "Message shown when countdown reaches zero"
+      }
+    ]
+  },
+  {
     "id": "feature",
     "fields": [
       {
