@@ -180,17 +180,35 @@
     ]
   },
   {
-    "id": "fragment",
+    "id": "feature",
     "fields": [
       {
-        "component": "aem-content",
-        "name": "reference",
-        "label": "Reference"
+        "component": "reference",
+        "valueType": "string",
+        "name": "icon",
+        "label": "Feature Icon",
+        "description": "Image icon or leave empty to use text/emoji",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "label": "Feature Title",
+        "required": true,
+        "placeholder": "e.g., Fast Performance"
+      },
+      {
+        "component": "richtext",
+        "name": "description",
+        "label": "Feature Description",
+        "valueType": "string",
+        "description": "Detailed description of the feature"
       }
     ]
   },
   {
-    "id": "signup",
+    "id": "fragment",
     "fields": [
       {
         "component": "aem-content",
@@ -222,6 +240,49 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "signup",
+    "fields": [
+      {
+        "component": "aem-content",
+        "name": "reference",
+        "label": "Reference"
+      }
+    ]
+  },
+  {
+    "id": "testimonial-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "avatar",
+        "label": "Avatar Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "name",
+        "label": "Customer Name",
+        "required": true
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "role",
+        "label": "Role/Title",
+        "placeholder": "e.g., CEO, Acme Corp"
+      },
+      {
+        "component": "richtext",
+        "name": "quote",
+        "label": "Testimonial Quote",
+        "valueType": "string",
+        "required": true
       }
     ]
   }

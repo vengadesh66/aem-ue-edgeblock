@@ -1,13 +1,12 @@
-    
 export default function decorate(block) {
   // Load widget bundle once
-  if (!window.__signupWidgetLoaded) {
+  if (!window.signupWidgetLoaded) {
     const script = document.createElement('script');
     // Use @latest to get the newest version, with cache-bust query param
-    script.src = "https://cdn.jsdelivr.net/gh/vengadesh66/preactwidgets@main/signup/app.js?v=" + Date.now();
+    script.src = `https://cdn.jsdelivr.net/gh/vengadesh66/preactwidgets@main/signup/app.js?v=${Date.now()}`;
     script.async = true;
     document.head.appendChild(script);
-    window.__signupWidgetLoaded = true;
+    window.signupWidgetLoaded = true;
   }
 
   let contentPath = '';
@@ -40,7 +39,7 @@ export default function decorate(block) {
   widget.setAttribute('content-path', contentPath);
   widget.setAttribute(
     'aem-author',
-    'https://author-p120465-e1171116.adobeaemcloud.com'
+    'https://author-p120465-e1171116.adobeaemcloud.com',
   );
 
   // UE instrumentation - allows editing CF via properties panel

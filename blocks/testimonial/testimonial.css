@@ -1,0 +1,159 @@
+/* Testimonial Block Styles
+ * AI Agent Skills Applied:
+ * ✅ Skill #6: CSS Scoping - all selectors start with .testimonial
+ * ✅ Skill #9: Performance-First - uses efficient selectors
+ */
+
+/* Block container */
+.testimonial {
+  padding: var(--spacing-l, 2rem) 0;
+  max-width: var(--content-max-width, 1200px);
+  margin: 0 auto;
+}
+
+/* List reset and layout */
+.testimonial-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-m, 1.5rem);
+}
+
+/* Individual testimonial card */
+.testimonial-item {
+  display: flex;
+  gap: var(--spacing-s, 1rem);
+  padding: var(--spacing-m, 1.5rem);
+  background-color: var(--background-color-light, #f9f9f9);
+  border-radius: var(--border-radius, 8px);
+  box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.testimonial-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgb(0 0 0 / 15%);
+}
+
+/* Avatar section */
+.testimonial-avatar {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: var(--background-color-medium, #e0e0e0);
+}
+
+.testimonial-avatar picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.testimonial-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Content section */
+.testimonial-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs, 0.5rem);
+}
+
+/* Name styling */
+.testimonial-name {
+  font-weight: var(--font-weight-bold, 700);
+  font-size: var(--font-size-m, 1.125rem);
+  color: var(--text-color-dark, #202020);
+  line-height: 1.3;
+}
+
+/* Role/title styling */
+.testimonial-role {
+  font-size: var(--font-size-s, 0.875rem);
+  color: var(--text-color-medium, #606060);
+  font-style: italic;
+  line-height: 1.4;
+}
+
+/* Quote styling */
+.testimonial-quote {
+  margin-top: var(--spacing-xs, 0.5rem);
+  font-size: var(--font-size-m, 1rem);
+  color: var(--text-color, #2c2c2c);
+  line-height: 1.6;
+  position: relative;
+}
+
+/* Optional: Add quotation marks */
+.testimonial-quote::before {
+  content: '"';
+  font-size: 2rem;
+  color: var(--color-accent, #0065ff);
+  position: absolute;
+  top: -0.5rem;
+  left: -0.75rem;
+  font-family: Georgia, serif;
+  opacity: 0.3;
+}
+
+/* Responsive adjustments */
+@media (width <= 768px) {
+  .testimonial-list {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .testimonial-avatar {
+    margin: 0 auto;
+  }
+
+  .testimonial-quote::before {
+    position: static;
+    display: block;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .testimonial-item {
+    background-color: var(--background-color-dark, #2c2c2c);
+    color: var(--text-color-light, #f0f0f0);
+  }
+
+  .testimonial-name {
+    color: var(--text-color-light, #f0f0f0);
+  }
+
+  .testimonial-role {
+    color: var(--text-color-medium-dark, #b0b0b0);
+  }
+
+  .testimonial-quote {
+    color: var(--text-color-light, #e0e0e0);
+  }
+}
+
+/* Print styles - Skill #6: Consider all media types */
+@media print {
+  .testimonial-item {
+    break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+
+  .testimonial-item:hover {
+    transform: none;
+  }
+}

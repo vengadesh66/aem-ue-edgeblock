@@ -1,0 +1,8 @@
+
+/* Signup Block Styles */
+
+/* Widget styles are handled by the web component's Shadow DOM */
+
+.signup {
+  padding: var(--spacing-m, 1.5rem) 0;
+}
