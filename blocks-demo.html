@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Blocks Demo - All 4 Blocks</title>
+  <meta name="description" content="Demonstration of Testimonial, Feature Grid, Contact Form, and Countdown Timer blocks">
+</head>
+<body>
+  <header></header>
+  <main>
+    <div>
+      <h1>New Blocks Demonstration</h1>
+      <p>This page demonstrates all 4 newly created blocks. Blocks are deployed and working!</p>
+    </div>
+
+    <div>
+      <h2>1. Testimonial Block (Static)</h2>
+      <p>Customer testimonials with avatars and quotes</p>
+    </div>
+
+    <div class="testimonial">
+      <div>
+        <div><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop" alt="John Doe"></div>
+        <div>John Doe</div>
+        <div>CEO, TechCorp</div>
+        <div>Outstanding product! It has completely transformed how we work. The support team is also incredibly responsive and helpful.</div>
+      </div>
+      <div>
+        <div><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop" alt="Jane Smith"></div>
+        <div>Jane Smith</div>
+        <div>Marketing Director, StartupCo</div>
+        <div>Best decision we ever made. ROI was visible within the first month. Highly recommend to any growing business!</div>
+      </div>
+      <div>
+        <div><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop" alt="Mike Johnson"></div>
+        <div>Mike Johnson</div>
+        <div>CTO, InnovateLabs</div>
+        <div>The technical implementation was seamless. Great documentation and the performance is excellent.</div>
+      </div>
+    </div>
+
+    <div>
+      <h2>2. Feature Grid Block (Static)</h2>
+      <p>Responsive grid showcasing features with icons</p>
+    </div>
+
+    <div class="feature-grid">
+      <div>
+        <div>🚀</div>
+        <div>Lightning Fast</div>
+        <div>Optimized for performance with sub-second load times across all devices</div>
+      </div>
+      <div>
+        <div>🔒</div>
+        <div>Enterprise Security</div>
+        <div>Bank-grade encryption and compliance with international security standards</div>
+      </div>
+      <div>
+        <div>🎨</div>
+        <div>Beautiful Design</div>
+        <div>Stunning user interface that delights users and drives engagement</div>
+      </div>
+      <div>
+        <div>📱</div>
+        <div>Mobile Optimized</div>
+        <div>Fully responsive design that works perfectly on phones, tablets, and desktops</div>
+      </div>
+      <div>
+        <div>⚡</div>
+        <div>Real-Time Updates</div>
+        <div>Instant synchronization across all devices with live data streaming</div>
+      </div>
+      <div>
+        <div>🌍</div>
+        <div>Global Scale</div>
+        <div>CDN-powered delivery reaching users worldwide with minimal latency</div>
+      </div>
+    </div>
+
+    <div>
+      <h2>3. Contact Form Widget (Preact)</h2>
+      <p>Interactive form with validation and submission handling</p>
+    </div>
+
+    <div class="contact-form">
+      <div>Contact Our Team</div>
+      <div>https://httpbin.org/post</div>
+    </div>
+
+    <div>
+      <h2>4. Countdown Timer Widget (Preact)</h2>
+      <p>Real-time countdown to a target date</p>
+    </div>
+
+    <div class="countdown-timer">
+      <div>2026-12-31T23:59:59</div>
+      <div>🎉 New Year 2027 Countdown</div>
+      <div>🎊 Happy New Year! The countdown is complete!</div>
+    </div>
+
+    <div>
+      <h2>Technical Details</h2>
+      <ul>
+        <li><strong>Testimonial Block</strong>: Pure JavaScript with optimized images, instrumentation preserved</li>
+        <li><strong>Feature Grid Block</strong>: Responsive CSS Grid layout, supports text and image icons</li>
+        <li><strong>Contact Form Widget</strong>: Preact component with Shadow DOM, form validation, accessibility</li>
+        <li><strong>Countdown Timer Widget</strong>: Preact with real-time updates, configurable target date</li>
+      </ul>
+    </div>
+
+    <div>
+      <h2>Widget Status Check</h2>
+      <p>Open browser DevTools Network tab to verify:</p>
+      <ul>
+        <li>✅ <code>contact-form/app.js?v=2</code> should load</li>
+        <li>✅ <code>countdown/app.js?v=2</code> should load</li>
+        <li>✅ Custom elements <code>&lt;contact-form-widget&gt;</code> and <code>&lt;countdown-timer-widget&gt;</code> should be defined</li>
+      </ul>
+    </div>
+  </main>
+  <footer></footer>
+</body>
+</html>
