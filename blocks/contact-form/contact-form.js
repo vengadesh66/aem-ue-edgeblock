@@ -2,7 +2,8 @@ export default function decorate(block) {
   // Load widget bundle once
   if (!window.contactFormWidgetLoaded) {
     const script = document.createElement('script');
-    script.src = `https://cdn.jsdelivr.net/gh/vengadesh66/preactwidgets@main/contact-form/app.js?v=${Date.now()}`;
+    // Use commit hash or timestamp for cache busting: increment v=2, v=3, etc. on updates
+    script.src = 'https://cdn.jsdelivr.net/gh/vengadesh66/preactwidgets@main/contact-form/app.js?v=2';
     script.async = true;
     document.head.appendChild(script);
     window.contactFormWidgetLoaded = true;

@@ -2,8 +2,8 @@ export default function decorate(block) {
   // Load widget bundle once
   if (!window.signupWidgetLoaded) {
     const script = document.createElement('script');
-    // Use @latest to get the newest version, with cache-bust query param
-    script.src = `https://cdn.jsdelivr.net/gh/vengadesh66/preactwidgets@main/signup/app.js?v=${Date.now()}`;
+    // Use commit hash or timestamp for cache busting: increment v=2, v=3, etc. on updates
+    script.src = 'https://cdn.jsdelivr.net/gh/vengadesh66/preactwidgets@main/signup/app.js?v=2';
     script.async = true;
     document.head.appendChild(script);
     window.signupWidgetLoaded = true;
